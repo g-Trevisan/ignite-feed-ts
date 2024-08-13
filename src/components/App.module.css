@@ -1,0 +1,21 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid; /* define o display como grid */
+    grid-template-columns: 256px 1fr; /* primeira coluna terá 256px fixo, já a segunda terá 1fr que significa tamanho flexivel e ocupará o espaço restante*/
+    gap: 2rem;
+    align-items: flex-start; /* faz com que o aplicativo fique alinhado ao topo da página*/
+}
+
+@media (max-width: 768px){ /* aplicando a responsividade para telas com o tamanho maixmo de 768px */
+
+    html {
+        font-size: 87.5%; /* reduzindo a fonte do sistema para utilizar em conjunto com o rem, que irá redimensionar para todos os estilos com o rem que se baseia na fonte do sistema*/
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
